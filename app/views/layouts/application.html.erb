@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <%= stylesheet_link_tag    "master" %>
+  <%= yield :head %>
+  <%= javascript_include_tag "jquery",
+                             "jquery/jquery.center.js",
+                             "application", %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; }
+		
+ html { 
+	background: url(bg.png) no-repeat center center fixed; background-color:; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+} 
+
+div#registrieren {
+	position:absolute; right: 0px;
+	width: 325px;
+	height: 230px;
+	margin-top: 50px;
+	padding-left: 30px;
+	padding-top: 20px;
+	background: 
+	  -webkit-gradient(linear, left top, left bottom, 
+	                   from(rgba(100, 100, 100, 1)), to(rgba(30, 30, 30, 1)));
+}
+
+div#anmelden {
+	display:inline-block;
+    padding: 30px 40px 30px 40px;
+}
+
+input[type=text], input[type=password] {
+	font-family: arial;
+	font-weight: bold;
+	font-size: 40px;
+	color: black;
+    width: 450px;
+	height: 60px;
+    background: white;
+    padding: 6px;
+	padding-left: 16px;
+    margin-bottom: 20px;
+    border: 0px solid #303030;
+	outline: none;
+	-moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+	
+	/*** Adding CSS3 ***/
+
+	    /*** Transition Selectors - What properties to animate and how long ***/
+	    -webkit-transition-property: -webkit-box-shadow, background;
+	    -webkit-transition-duration: 0.25s;
+
+	    /*** Adding a small shadow ***/
+	    -moz-box-shadow: 0px 0px 2px #000;
+	    -webkit-box-shadow: 0px 0px 2px #000;
+}
+
+input[type=button], input[type=submit], input[type=reset], button, .button {
+	
+	display: inline-block;
+	background: #d0d0d0 url(btn.bg.png) repeat-x 0px 0px;
+	padding:7px;
+	font-family: arial;
+	font-size: 16px;
+	font-weight:bold;
+	border:1px solid #505050;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+
+	
+	text-shadow: 1px 1px #fff;
+}
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button:hover, .button:hover {
+	background: #e0e0e0 url("../images/btn.bg.png") repeat-x 0px 0px;
+	color: #516527; /*Change color to fit theme of your site*/
+	cursor: hand;
+	cursor: pointer;
+}
+
+h1 {
+	color:#ebc700;
+
+	}

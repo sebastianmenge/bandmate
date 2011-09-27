@@ -1,11 +1,15 @@
 Bandmate::Application.routes.draw do
+  devise_for :users
+  
+  # devise_scope :user do
+  #     root :to => "devise/sessions#new"
+  #   end
+  
   root :to => 'pages#start'
 
   get "pages/home"
 
   get "pages/agb"
-
-  get "pages/password_reset"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

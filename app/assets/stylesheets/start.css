@@ -1,4 +1,17 @@
 * { margin: 0; padding: 0; }
+
+a:link {
+	color: #ebc700;
+	text-decoration: none;
+}
+a:hover {color: #ebc700; text-decoration: underline;}
+a:visited {color: #ebc700;}
+
+em {
+	color:#ebc700;
+	font-size: 20px;
+	font-style: normal;
+}
 		
  html { 
 	background: url(bg.png) no-repeat center center fixed; background-color:; 
@@ -8,65 +21,86 @@
 	background-size: cover;
 } 
 
-div#registrieren {
-	position:absolute; right: 0px;
-	width: 325px;
-	height: 230px;
-	margin-top: 50px;
-	padding-left: 30px;
-	padding-top: 20px;
-	background: 
-	  -webkit-gradient(linear, left top, left bottom, 
-	                   from(rgba(100, 100, 100, 1)), to(rgba(30, 30, 30, 1)));
+.sep_line1 {
+	position:absolute; top: 85px;
+	height: 1px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .40);
+}
+.sep_line2 {
+	position:absolute; top: 600px;
+	height: 1px;
+	width: 100%;
+	background-color: rgba(255, 255, 255, .40);
 }
 
-div#anmelden {
-	display:inline-block;
-    padding: 30px 40px 30px 40px;
+.start_container {
+	width: 950px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 20px;
 }
 
-input[type=text], input[type=password] {
+.anmelden {
+	position:absolute; right: 240px; top: 20px;
+	
+}
+
+input[type=text], input[type=password], input[type=email] {
 	font-family: arial;
-	font-weight: bold;
-	font-size: 40px;
+	font-size: 14px;
 	color: black;
-    width: 450px;
-	height: 60px;
+    width: 144px;
+	height: 23px;
+    background: #d7d7d7;
+    margin-bottom: 5px;
+	margin-left: 10px;
+	padding-left: 6px;
+	padding-bottom: 1px;
+	border: 0px;
+    border-bottom: 1px solid #777777;
+	outline: none;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+	font-family: arial;
+	font-size: 14px;
+	color: black;
+    width: 144px;
+	height: 23px;
     background: white;
-    padding: 6px;
-	padding-left: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+	margin-left: 10px;
+	padding-left: 6px;
+	padding-bottom: 1px;
     border: 0px solid #303030;
 	outline: none;
-	-moz-border-radius: 7px;
-    -webkit-border-radius: 7px;
-	
-	/*** Adding CSS3 ***/
-
-	    /*** Transition Selectors - What properties to animate and how long ***/
-	    -webkit-transition-property: -webkit-box-shadow, background;
-	    -webkit-transition-duration: 0.25s;
-
-	    /*** Adding a small shadow ***/
-	    -moz-box-shadow: 0px 0px 2px #000;
-	    -webkit-box-shadow: 0px 0px 2px #000;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	box-shadow: 0 0 10px rgba(235, 199, 0, 1);
+	    -webkit-box-shadow: 0 0 10px rgba(235, 199, 0, 1); 
+	    -moz-box-shadow: 0 0 10px rgba(235, 199, 0, 1);
 }
 
 input[type=button], input[type=submit], input[type=reset], button, .button {
 	
 	display: inline-block;
 	background: #d0d0d0 url(btn.bg.png) repeat-x 0px 0px;
-	padding:7px;
+	height: 26px;
+	padding-left: 3px;
+	padding-right: 3px;
 	font-family: arial;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight:bold;
 	border:1px solid #505050;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
-
-	
 	text-shadow: 1px 1px #fff;
+	margin-left: 10px;
 }
+
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button:hover, .button:hover {
 	background: #e0e0e0 url("../images/btn.bg.png") repeat-x 0px 0px;
 	color: #516527; /*Change color to fit theme of your site*/
@@ -74,7 +108,35 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, but
 	cursor: pointer;
 }
 
+.remember_me {
+	color: #e0e0e0;
+	font-size: 12px;
+	float:left;
+	margin-right: 70px;
+	margin-left: 10px;
+}
+
+.forgot_password {
+	color: white;
+	font-size: 12px;
+}
+
+.signup {
+	position:absolute; top:180px; right: 260px;
+	color:white;
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+.intro_text {
+	color: white;
+	position:absolute; top:180px;
+	font-size:50px;
+	/*text-shadow: 1px 1px 20px rgba(235, 199, 0, .70‚);*/
+}
+
 h1 {
 	color:#ebc700;
+	font-size: 40px;
 
 	}

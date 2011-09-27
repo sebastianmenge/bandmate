@@ -8,8 +8,5 @@ class PagesController < ApplicationController
 
   def agb
   end
-
-  def password_reset
-  end
-
+  
 end

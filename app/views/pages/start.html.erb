@@ -2,10 +2,20 @@
     <%= stylesheet_link_tag 'start' %>
   <% end %>
 
+<div class="start_container">
+  <h1>bandmate</h1><br>
+  <div class="anmelden">
+        <%= render 'devise/sessions/login_form' %>
+  </div>
+  <div class="signup">
+    <p>Not signed up yet?<em> Sign up.</em></p>
+    <%= render 'devise/registrations/sign_up' %>
+  </div>
+  <div class="intro_text">
+    <p>Organize your bands<br /> and everything around<br/>
+      <strong>"the proper way""</strong></p>
+  </div>
+</div>
+<div class="sep_line1"></div>
+<div class="sep_line2"></div>
 
-  <div class="centralize draggable" id="anmelden">
-    <h1>bandmate.fm</h1><br>
-    <input type="text" name="username" value="" /><br/>
-    <input type="password" name="password" value=""  /><br/>
-    <input type="submit" value="Anmelden" name="submit" class="submit" />
-  </div>    

@@ -6,6 +6,10 @@ gem "devise", "~> 1.4.7"
 
 gem "paperclip", "~> 2.4.2"
 
+gem 'therubyracer'
+
+gem "execjs"
+
 
 
 group :production do

@@ -1,5 +1,5 @@
-<% content_for :title do %> get started! 
-<% end %>
+<% title "get started!" %> 
+
 
 <% content_for :head do %>
     <%= stylesheet_link_tag 'start' %>
@@ -10,8 +10,9 @@
     <div class="anmelden">
       <%= render :partial => "login_form"%>
     </div>
-      <div id="signup">
-        <p>Not signed up yet?<em> Sign up.</em></p>
+      <div id="signup" class="signup">
+        <p class="not_signed_up">
+          Not signed up yet?<em> Sign up.</em></p>
         <%= render :partial => "devise/registrations/sign_up" %>
       </div>
       <div class="intro_text">

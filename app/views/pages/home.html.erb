@@ -1,5 +1,4 @@
-<% content_for :title do %> #{@title}" 
-<% end %>
+<%= title "#{current_user.username}"%>
 
 <% content_for :head do %>
     <%= stylesheet_link_tag 'home' %>

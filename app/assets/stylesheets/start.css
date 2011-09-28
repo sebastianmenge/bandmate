@@ -41,6 +41,10 @@ em {
 	padding: 20px;
 }
 
+.logo {
+	margin-top: 6px;
+}
+
 .anmelden {
 	position:absolute; right: 240px; top: 20px;
 	
@@ -52,7 +56,7 @@ input[type=text], input[type=password], input[type=email] {
 	color: black;
     width: 144px;
 	height: 23px;
-    background: #d7d7d7;
+    background: #f1f1f1;
     margin-bottom: 5px;
 	margin-left: 10px;
 	padding-left: 6px;
@@ -121,13 +125,6 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, but
 	font-size: 12px;
 }
 
-.signup {
-	position:absolute; top:180px; right: 260px;
-	color:white;
-	font-size: 20px;
-	margin-top: 0px;
-}
-
 .intro_text {
 	color: white;
 	position:absolute; top:180px;
@@ -138,5 +135,35 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, but
 h1 {
 	color:#ebc700;
 	font-size: 40px;
+}
 
-	}
+
+/*SIGN UP AREA STYLES*/
+
+
+div#signup {
+	position:absolute; top:180px; right: 260px;
+	color:white;
+	font-size: 20px;
+	margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+

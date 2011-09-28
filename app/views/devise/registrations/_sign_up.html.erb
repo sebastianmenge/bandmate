@@ -1,14 +1,19 @@
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+ <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+    <div>
+    <%= f.text_field :username, :placeholder => "Vollständiger Name" %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div>
+    <%= f.email_field :email, :placeholder => "E-Mail" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div>
+    <%= f.password_field :password, :placeholder => "Passwort" %></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+    <div>
+    <%= f.password_field :password_confirmation, :placeholder => "Passwort wiederholen" %></div>
+
+    <div><%= f.submit "Sign up" %></div>
+  <% end %>
+
+

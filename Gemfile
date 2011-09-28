@@ -4,6 +4,8 @@ gem 'rails', '3.1.0'
 
 gem "devise", "~> 1.4.7"
 
+gem "paperclip", "~> 2.4.2"
+
 
 
 group :production do

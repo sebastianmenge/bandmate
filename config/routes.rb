@@ -1,15 +1,14 @@
 Bandmate::Application.routes.draw do
   devise_for :users
-  
-  # devise_scope :user do
-  #     root :to => "devise/sessions#new"
-  #   end
-  
-  root :to => 'pages#start'
 
-  get "pages/home"
+  
+  match '/user' => "pages#home", :as => :user_root
 
   get "pages/agb"
+  
+  devise_scope :user do
+    root :to => "devise/sessions#new"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

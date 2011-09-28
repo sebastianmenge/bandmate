@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title %></title>
+  <title>bandmate | <%= yield :title %></title>
   <%= stylesheet_link_tag    "master" %>
   <%= yield :head %>
   <%= javascript_include_tag "jquery",

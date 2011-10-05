@@ -1,0 +1,233 @@
+// Place all the styles related to the Bands controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#bands_controller {
+	
+a {
+	color: white;
+ 	text-decoration: none;
+	font-size: 12px;
+&:hover {
+	color: white; 
+	text-decoration: underline;
+	font-size: 12px;
+&:visited {
+	color: white;
+	font-size: 12px;
+	}
+  }
+}
+
+* { margin: 0; padding: 0px; }
+
+
+
+
+.ov_container {
+	width: 100%;
+	min-height: 100%;
+	background: $bg-main;
+}
+
+.band_header {
+	background: #dddddd;
+	width: 100%;
+	height: 63px;
+	margin-top: 0px;
+}
+
+#band_menu ul {
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 22px;
+	padding-top: 20px;
+}
+
+#band_menu ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 20px;
+}
+
+.triangle {
+	margin-left: 39px;
+	margin-top: 12px;
+}
+
+.bands {
+	padding-left: 20px;
+	padding-right: 18px;
+	padding-bottom: 5px;
+	padding-top: 3px;
+	position:absolute; right: 0px; top: 47px;
+	@include round-bottom-left(5px);
+}
+
+.section_head {
+	float:left;
+	font-size: 17px;
+	margin-right: 10px;
+	margin-top: 19px;
+}
+
+.section_curly_open {
+	font-size: 45px;
+	margin-top: 0px;
+	margin-right: 10px;
+	float: left;
+}
+
+.section_curly_close {
+	font-size: 45px;
+	margin-top: 0px;
+	float: right;
+}
+
+.member_container {
+	float: left;
+	margin-top: 7px;
+	margin-right: 10px;
+}
+
+.member_name {
+	font-size: 10px;
+	text-align: center;
+}
+
+.member_image {
+	height: 40px;
+	width: 40px;
+	margin-top: 1px;
+	border: 1px solid #b7b7b7;
+	@include round-all(7px);
+}
+
+/* Main Content */
+
+.overview_container {
+	width: 98%;
+	height: 600px;
+	background: white;
+	@include round-all(10px);
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+/*.test_piece2 {
+	float: left;
+	width: 60px;
+	height: 30px;
+	background-color: #FF7D24;
+	margin-right: 10px;
+}
+.test_piece3 {
+	float: left;
+	width: 60px;
+	height: 30px;
+	background-color: #FF5526;
+	margin-right: 10px;
+}
+.test_piece4 {
+	float: left;
+	width: 60px;
+	height: 30px;
+	background-color: #A3281F;
+	margin-right: 10px;
+}
+.test_piece5 {
+	float: left;
+	width: 60px;
+	height: 30px;
+	background-color: #610F16;
+	margin-right: 10px;
+}
+*/
+
+
+
+
+
+/* HEADER */
+
+
+#top_menu_1 {
+	width: 100%;
+	height: 45px;
+	border-top:1px solid #3c3c3c;
+	border-bottom:1px solid #111111;
+	background: black;
+	/*background: 
+		  -webkit-gradient(linear, left top, left bottom, 
+		                   from(#313131), to(#000000));*/
+	padding: 0px;
+}
+
+
+
+
+.logo {
+	margin-top: 5px;
+	margin-left: 12px;
+	letter-spacing: -2px;
+	float: left;
+}
+
+nav {
+	margin-top: 16px;
+	margin-left: 30px;
+	float:left;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 20px;
+	font-size: 17px;
+	color: white;
+}
+
+.logged_in_as {
+	color: #747474;
+	font-size: 13px;
+	float:left;
+	margin-right: 10px;
+	margin-top: 1px;
+}
+
+.logged_user {
+	display: inline;
+	position: absolute; right:30px;
+	float:left;
+	margin-right: 20px;
+	margin-top: 12px;
+}
+
+.logout {
+	position: absolute; right:15px;
+	display: inline;
+	margin-top: 10px;
+}
+
+/*.thumbnail {
+	width:30px;
+	height: 30px;
+	float:left;
+	margin-right: 10px;
+	margin-bottom: 6px;
+	@include round-all(4px);
+}*/
+
+
+
+
+
+
+}

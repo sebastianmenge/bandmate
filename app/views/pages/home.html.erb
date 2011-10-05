@@ -1,35 +1,23 @@
 <%= title "#{current_user.username}"%>
 
-<% content_for :head do %>
-    <%= stylesheet_link_tag 'home' %>
-  <% end %>
-
-
-<div class="top_menu_1">
-  <div class="top_menu_container">
-    <h1 class="logo">bandmate</h1>
-    <nav>
-      <ul>
-        <li><h5>Bands</h5></li>
-        <li><h5>Proberaum</h5></li>
-      </ul>
-    </nav>
-      
-      <div class="settings_log">
-        <% if user_signed_in? %>
-          
-          <h5 class="logged_user"><%= current_user.username %></h5>
-          <%= link_to image_tag('logout.png'), destroy_user_session_path, :method => :delete  %></li>
-        <% end %>
-      </div>
-  </div>
-</div>
-
 <div class="main_container round">
-  <div class="profile_image">
-    <%= image_tag current_user.avatar.url(:medium), :class => "round" %>
-  </div>
-  <div class="username"><%= current_user.username %></div>
+  <div>
+    <% if current_user.avatar? %>
+      <%= image_tag current_user.avatar.url(:original), :class => "profile_image" %>
+    <% else %>
+      <%= image_tag 'no_prof_img.png', :class => "profile_image" %>
+    <% end %>
+    </div>
+  <div class="username"><%= current_user.username.split(" ").collect { |p| p.capitalize }.join(" ") %></div>
   <p><%= link_to "Edit Profile", edit_user_registration_path %></p>
-  
+
+  <div class="add_band">
+    <p>Du hast noch keine Bands oder Projekte erstellt.<br>
+      Erstelle jetzt eine Band/s</p>
+      <div><%=%>  </div>
+  </div>
+  <div class="add_room">
+    <p>Noch keine Proberäume vorhanden.<br>
+      Erstelle einen neuen Proberaum und lade Freunde ein</p>
+  </div>
 </div>

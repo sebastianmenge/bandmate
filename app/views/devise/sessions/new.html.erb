@@ -2,24 +2,38 @@
 
 
 <% content_for :head do %>
-    <%= stylesheet_link_tag 'start' %>
+    <%= stylesheet_link_tag 'get_started' %>
   <% end %>
 
-<div class="start_container">
-  <%= image_tag 'logo_gelb.png', :class => "logo"%><br>
+<div class="start_container round-bottom">
+  <%= image_tag 'logo_gelb.png', :width => "168px", :class => "logo"%><br>
     <div class="anmelden">
       <%= render :partial => "login_form"%>
     </div>
-      <div id="signup" class="signup">
-        <p class="not_signed_up">
-          Not signed up yet?<em> Sign up.</em></p>
-        <%= render :partial => "devise/registrations/sign_up" %>
-      </div>
+      
       <div class="intro_text">
-        <p>Organize your bands<br /> and everything around<br/>
-          <strong>"the proper way"</strong></p>
+        <p>Organize your bands<br /> and everything around <br/>
+          <strong>"the fast and easy way"</strong></p>
+      </div>
+      <div class="signup_container">
+        <div id="signup">
+          <p class="not_signed_up">
+            Not signed up yet?<em> Sign up.</em></p>
+            <%= render :partial => "devise/registrations/sign_up" %>
+        </div>
       </div>
     </div>
-    <div class="sep_line1"></div>
-    <div class="sep_line2"></div>  
 </div>
+<!-- <div class="sep_line2"></div> -->
+<footer>
+  <nav>
+    <ul>
+      <li><p>Über Uns</p></li>
+      <li><p>Hilfe</p></li>
+      <li><p>Bedingungen</p></li>
+      <li><p>Entwickler</p></li>
+      <li><p>Quellen</p></li>
+    </ul>
+  </nav>
+</footer>
+<div class="sep_line1"></div>

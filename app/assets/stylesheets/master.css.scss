@@ -1,0 +1,57 @@
+$bg-main: #3c3c3c;
+
+
+* { margin: 0; padding: 0; }
+
+html { height: 100%;}
+
+body { 
+	margin:0px;
+	font-family: arial, helvetica;
+	height: 100%;
+}
+
+.flash_alert {
+	color:white;
+}
+
+/* Round Corners */
+
+@mixin round-all($radius: 7px) {
+	-moz-border-radius:       $radius;
+	-webkit-border-radius:    $radius;
+	border-radius:            $radius;
+}
+
+@mixin round-top-left($radius) {
+	-moz-border-top-left-radius:       $radius;
+	-webkit-border-top-left-radius:    $radius;
+	border-top-left-radius:            $radius;
+}
+
+@mixin round-top-right($radius) {
+	-moz-border-bottom-left-radius:       $radius;
+	-webkit-border-bottom-left-radius:    $radius;
+	border-bottom-left-radius:            $radius;
+}
+
+@mixin round-bottom-right($radius) {
+	-moz-border-bottom-right-radius:       $radius;
+	-webkit-border-bottom-right-radius:    $radius;
+	border-bottom-right-radius:            $radius;
+}
+
+@mixin round-bottom-left($radius) {
+	-moz-border-bottom-left-radius:       $radius;
+	-webkit-border-bottom-left-radius:    $radius;
+	border-bottom-left-radius:           $radius;
+}
+
+
+
+
+
+
+
+
+

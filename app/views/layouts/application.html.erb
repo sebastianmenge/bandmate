@@ -2,14 +2,14 @@
 <html>
 <head>
   <title>bandmate | <%= yield :title %></title>
-  <%= stylesheet_link_tag    "master" %>
+  <%= stylesheet_link_tag "application" %>
   <%= yield :head %>
   <%= javascript_include_tag "jquery",
                              "jquery/jquery.center.js",
                              "application", %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%= params[:controller].parameterize %>_controller">
   
   <% flash.each do |key, value| %>
   <div class="flash_alert <%= key %>"><%= value %></div>

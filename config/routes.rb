@@ -1,10 +1,17 @@
 Bandmate::Application.routes.draw do
+  resources :bands
+
   devise_for :users
 
+  match '/profile', :to => 'pages#home'
   
-  match '/user' => "pages#home", :as => :user_root
+  match '/user' => "bands#show", :as => :user_root
+  
+  get "pages/overview"
 
   get "pages/agb"
+  
+  get "pages/home"
   
   devise_scope :user do
     root :to => "devise/sessions#new"

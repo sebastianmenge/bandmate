@@ -1,0 +1,22 @@
+<div id="top_menu_1">
+  <div class="logo">
+    <%= image_tag 'logo_gelb.png', :class => "logo", :height => "20px" %>
+  </div>
+  <div class="logged_user">
+    <% if current_user.avatar? %>
+      <%= image_tag current_user.avatar.url(:thumb), :class => "profile_image" %>
+    <% else %>
+      <%= image_tag 'no_prof_img.png', :class => "profile_image" %>
+    <% end %>
+    
+    <% if user_signed_in? %>
+    <%= link_to edit_user_registration_path do %>
+      <%= current_user.username.split(" ").collect { |p| p.capitalize }.join(" ") %>
+    <% end %>
+  <% end %>
+  </div>
+  <div class="vert_line"></div>
+  <div class="logout">
+    <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+  </div>
+</div>

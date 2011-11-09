@@ -8,6 +8,41 @@
 //= require jquery_ujs
 //= require_tree .
 
+jQuery.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
+
+
+$(document).ready(function() {
+ 
+	// $("#band_menu ul li:nth-child(2)").click(function() {
+	// 				$(".triangle").css("margin-left", "100px");
+	// 			});
+	
+	// $("#section_head_bg").mouseover(function() {
+	// 		$(this).css("background", "#ababab");
+	// 	});
+	
+	$(".select_arrow, .section_head").click(function() {
+		$("#band_selector").show();
+		$("#section_head_bg").css("background", "white");
+	});
+	
+	$("#band_selector").mouseout(function() {
+		$(this).hide();
+		$("#section_head_bg").css("background", "");
+	});
+	
+	
+
+
+});
+
+
+
+
+
+
 
 
 

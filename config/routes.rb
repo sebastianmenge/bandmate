@@ -1,21 +1,21 @@
 Bandmate::Application.routes.draw do
-  resources :bands
 
-  devise_for :users
-
-  match '/profile', :to => 'pages#home'
+  devise_for :users,
+  :controllers => { :registrations => "registrations" }
   
-  match '/user' => "bands#show", :as => :user_root
-  
-  get "pages/overview"
-
-  get "pages/agb"
-  
-  get "pages/home"
+  resources :bands do
+    resources :posts
+  end
   
   devise_scope :user do
     root :to => "devise/sessions#new"
   end
+  
+  #match '/bands/:id' => "bands#show", :as => :user_root
+  
+  #match '/profile', :to => 'pages#show_user', :as => 'profile'
+
+  get "pages/agb"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

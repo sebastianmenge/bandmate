@@ -10,6 +10,14 @@ gem 'therubyracer'
 
 gem "execjs"
 
+gem "rails_autolink"
+
+gem "friendly_id4", "4.0.0.beta3", :require => "friendly_id"
+
+gem "babosa", "~> 0.3.5"
+
+gem "RedCloth", "~> 4.2.8"
+
 
 
 group :production do

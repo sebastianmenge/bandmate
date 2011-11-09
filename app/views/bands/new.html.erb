@@ -1,8 +1,1 @@
-
-
-<%= form_for (@band) do |f| %>
-  <div><%= f.text_field :name %></div>
-  
-  <div> <%= f.submit "Speichern"%></div>
-  
-<% end %>
+<%= render :partial => "new_band_form" %>

@@ -1,0 +1,185 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Main Content */
+
+.posts_container {
+	position: relative;
+	width: 98%;
+	height: 650px;
+	background: white;
+	@include round-bottom-left(7px);
+	@include round-bottom-right(7px);
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.triangle_posts {
+	position: absolute;
+	left: 127px;
+	top: 65px;
+	z-index: 49;
+}
+
+.post_it_container {
+	position: relative;
+	width: 460px;
+	@include round-top-left(7px);
+	padding-top: 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	border-right: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.news {
+	margin-left: 30px;
+	margin-bottom: 5px;
+	color: #3f3f3f;
+}
+
+textarea {
+	font-family: arial;
+	font-size: 14px;
+	color: black;
+    width: 385px;
+	height: 18px;
+	padding: 5px;
+    margin-bottom: 5px;
+	margin-left: 30px;
+    border: 1px solid #b3b3b3;
+	@include round-all(3px);
+	text-align: top-left;
+	resize: none;
+}
+
+.post_button {
+	margin-left: 30px;
+	margin-bottom: 0px;
+	width: 396px;
+	text-align: right;
+	padding-bottom: 15px;
+	
+}
+
+input[type=submit], input[type=reset], button, .button {
+
+	background: #d0d0d0 url(btn.bg.png) repeat-x 0px 0px;
+	height: 26px;
+	width: 50px;
+	font-family: arial;
+	font-size: 13px;
+	font-weight:bold;
+	border:1px solid #505050;
+	border-radius: 5px;
+	@include round-all(5px);
+	text-shadow: 1px 1px #fff;
+	margin-left: 3px;
+	display: none;
+}
+
+#posts {
+	width: 462px;
+	height: 552px;
+	padding-top: 0px;
+	overflow: auto;
+	@include round-bottom-left(7px);
+	//box-shadow: 
+	//			  rgba(0, 0, 0, 0.30) 0px 3px 7px;
+}
+
+#post_wrap {
+	position:relative;
+	border-right: 1px solid rgba(0, 0, 0, 0.15);
+	width: 460px;
+}
+
+.post {
+	//background: white;
+	position:relative;
+	margin-bottom: 1px;
+	width: 430px;
+	padding: 15px 0px 15px 30px;	
+	border-bottom: 1px solid #ececec;
+	@include round-bottom-left(7px);
+}
+
+.post:hover {
+	position:relative;
+	margin-bottom: 1px;
+	width: 430px;
+	padding: 15px 0px 15px 30px;	
+	border-bottom: 1px solid #ececec;
+	margin-left: 0px;
+	background: #f0f0f0;
+	@include round-bottom-left(7px);
+}
+
+.post_selected {
+	background: #f0f0f0;;
+}
+
+.delete_link {
+	position:absolute;
+	top: 15px;
+	right: 12px;
+}
+
+.posted_at {
+	font-size: 10px;
+	color: #9b9b9b;
+	margin-top: 7px;
+}
+
+#arrow_posts {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	display: none;
+}
+
+.profile_image_small {
+	width: 25px;
+	height: 25px;
+	float: left;
+	@include round-all(3px);
+	margin-right: 8px;
+}
+
+.username {
+	margin-top: 6px;
+	margin-bottom: 3px;
+	margin-right: 8px;
+	font-size: 12px;
+	font-weight: bold;
+	float: left;
+}
+
+.content {
+	width: 400px;
+	margin-top: 20px;
+	color: #232323;
+	font-weight: 200;
+	font-size: 14px;
+	a {
+		font-weight: 400;
+		color: black;
+		text-decoration: underline;
+	}
+}
+
+#posts_wrap {
+	float: left;
+}
+	
+#postzoom {
+	display: inline-block;
+	width: 63%;
+	height: 580px;
+	margin-top: 35px;
+	margin-left: 30px;
+	//border: 1px solid #ececec;
+	//display: none;
+}
+	

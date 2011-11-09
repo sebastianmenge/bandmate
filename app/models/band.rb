@@ -1,7 +1,9 @@
 class Band < ActiveRecord::Base
-  attr_accessible :name
   
-  belongs_to :user, :dependent => :destroy
+  has_many :posts
+  belongs_to :user
+  
+  attr_accessible :name
   
   validates :name, :presence => :true, 
                    :length => { :maximum => 30 }

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>bandmate | <%= yield :title %></title>
-  <%= stylesheet_link_tag "application" %>
-  <%= yield :head %>
-  <%= javascript_include_tag "jquery",
-                             "jquery/jquery.center.js",
-                             "application", %>
-  <%= csrf_meta_tags %>
-</head>
-<body id="<%= params[:controller].parameterize %>_controller">
+  <head>
+    <title><%= yield :title %></title>
+    <%= stylesheet_link_tag "application" %>
+    <style type="text/css"><%= yield :stylesheets %></style>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body id="<%= params[:controller].parameterize %>_controller">
+    <% flash.each do |key, value| %>
+      <div class="flash_alert <%= key %>"><%= value %></div>
+    <% end %>
   
-  <% flash.each do |key, value| %>
-  <div class="flash_alert <%= key %>"><%= value %></div>
-  <% end %>
-
-<%= yield %>
-
-</body>
+    <div class="headers">
+      <%= render "header" %>
+      <%= render "band_header" %>
+    </div>
+    <div>
+      <%= yield %>
+    </div>
+    
+  
+  </body>
 </html>

@@ -1,30 +1,27 @@
 <% title "get started!" %> 
 
 
-<% content_for :head do %>
-    <%= stylesheet_link_tag 'get_started' %>
-  <% end %>
 
-<div class="start_container round-bottom">
+
+<div class="start_container">
   <%= image_tag 'logo_gelb.png', :width => "168px", :class => "logo"%><br>
     <div class="anmelden">
       <%= render :partial => "login_form"%>
     </div>
       
       <div class="intro_text">
-        <p>Organize your bands<br /> and everything around <br/>
-          <strong>"the fast and easy way"</strong></p>
-      </div>
+        <p>Behalte alles im Überblick<br /> Kosten, Konzerte etc.. <br/>
+          <strong>schnell und einfach</strong></p>
+      </div><nobr>
       <div class="signup_container">
         <div id="signup">
           <p class="not_signed_up">
-            Not signed up yet?<em> Sign up.</em></p>
-            <%= render :partial => "devise/registrations/sign_up" %>
+            Noch nicht angemeldet?<em> Mach mit.</em></p>
+            <%= render :partial => "registrations/sign_up" %>
         </div>
       </div>
     </div>
 </div>
-<!-- <div class="sep_line2"></div> -->
 <footer>
   <nav>
     <ul>

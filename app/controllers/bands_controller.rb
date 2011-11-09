@@ -1,12 +1,17 @@
 class BandsController < ApplicationController
   before_filter :authenticate_user!
   
+  def index
+    @bands = Band.all
+  end
+  
   def new
     @band = Band.new
   end
   
   def create
-    @band = current_user.bands.build(params[:band])
+    #@band = current_user.bands.build(params[:band])
+    @band = Band.new(params[:band])
     if @band.save
       redirect_to @band, :flash => { :success => "Band Created!" }
     else
@@ -15,13 +20,14 @@ class BandsController < ApplicationController
   end
 
   def show
-    # @band = Band.find(params[:id])
+    @band = Band.find(params[:id])
   end
 
   def edit
   end
   
   def destroy
+    @band = Band.find(params[:id])
     @band.destroy
     redirect_to @band, :flash => { :notice => "Band destroyed"}
   end

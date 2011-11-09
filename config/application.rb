@@ -15,8 +15,13 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+
+
 module Bandmate
   class Application < Rails::Application
+    
+    
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -50,5 +55,16 @@ module Bandmate
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    
+    config.to_prepare do
+      Devise::SessionsController.layout "start"
+      Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application" : "start" }
+      Devise::ConfirmationsController.layout "start"
+      Devise::UnlocksController.layout "start"            
+      Devise::PasswordsController.layout "start"        
+    end
   end
 end
+
+

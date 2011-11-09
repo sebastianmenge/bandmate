@@ -1,32 +1,6 @@
-<%= title "#{current_user.username} @ {band.name}"%>
+<%= title "#{current_user.username} @ #{@band.name} | bandmate "%>
 
+<div class="overview_container">
+  <%= image_tag 'triangle_white.png', :class => 'triangle' %>
 
-
-<div class="ov_container">
-  <%= render :partial => "header" %>
-    <div class="band_header">
-      <div id="band_menu">
-      <ul>
-        <li>Overview</li>
-        <li>Stream</li>
-        <li>Konzerte/Tour</li>
-        <li>Bandkasse</li>
-      </ul>
-      <%= image_tag 'triangle.png', :class => 'triangle' %>
-      </div>
-      <div class="bands">
-        <h3 class="section_head"></h3>
-          <p class="section_curly_open">{</p>
-            <div class="member_container">
-              <%= image_tag current_user.avatar.url(:thumb), :class => "member_image" %>
-            <!-- <p class="member_name">
-                          <%= current_user.username.split.first.capitalize %>
-                        </p> -->
-            </div>
-              <p class="section_curly_close">}</p>
-        </div>
-    </div>
-      <div class="overview_container">
-        
-      </div>
 </div>

@@ -7,7 +7,7 @@
 /*Profile Page*/
 
 
-.main_container {
+.profile_container {
 	width: 890px;
 	height: 600px;
 	margin-left: auto;
@@ -15,6 +15,7 @@
 	margin-top: 20px;
 	background-color: white;
 	padding:30px;
+	@include round-all(7px);
 }
 
 .profile_image {

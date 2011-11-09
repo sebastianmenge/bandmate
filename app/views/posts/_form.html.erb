@@ -1,0 +1,7 @@
+<%= form_for [@band, post], :id => "new_post", :remote => true do |f| %>
+
+  <div class="post_input" id="post_field"><%= f.text_area :content %></div>
+  
+  <div class="post_button"> <%= f.submit "Post it", :id => "post_button" %></div>
+  
+<% end %>

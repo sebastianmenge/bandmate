@@ -1,0 +1,28 @@
+<div id="band_header">
+  <div id="band_menu">
+  <ul>
+    <li><%= link_to "Übersicht", band_path(current_user) %></li>
+    <li><%= link_to "Bandstream", band_posts_path(@band) %></li>
+    <li><%= link_to "Konzerte/Tour" %></li>
+    <li><%= link_to "Bandkasse" %></li>
+    <li><%= link_to "Setlists" %></li>
+    <li><%= link_to "Notizen" %></li>
+    <li><%= link_to "Merch" %></li>
+    <li><%= link_to "GEMA/Lizensierung" %></li>
+  </ul>
+  
+  </div>
+  <div id="section_head_bg">
+    <div class="bandname_wrap">
+      <%= image_tag 'select_arrow.png', :class => 'select_arrow' %>
+      <p class="section_head"><%= @band.name  %></p>
+      
+    </div>
+  </div>
+  <div>
+    <%= image_tag 'settings.png', :class => 'settings' %>
+  </div>
+  <div id="band_selector">
+    
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield :title %></title>
+    <%= stylesheet_link_tag "master", "get_started" %>
+    <%= javascript_include_tag "jquery",
+                             "jquery/jquery.center.js",
+                             "application", %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <% flash.each do |key, value| %>
+      <div class="flash_alert <%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+
+
+  </body>
+</html>

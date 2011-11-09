@@ -1,0 +1,9 @@
+$("#posts").prepend(" <%= escape_javascript(render(:partial => @post )) %> ");
+$('#post_wrap').hide().fadeIn(1000);
+$('#post_button').attr('value', 'Post it');
+$('#post_button').attr('disabled', null);
+$("textarea").animate({
+	height: "20px",
+	}, 100 );
+$("#post_button").hide();
+$("#new_post")[0].reset();

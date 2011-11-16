@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
   
   validates :content, :presence => :true
 
-  belongs_to :band, :dependent => :destroy
+  belongs_to :band
   belongs_to :user          
   
   default_scope :order => 'posts.created_at DESC'

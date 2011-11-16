@@ -2,11 +2,15 @@
   <div class="logo">
     <%= image_tag 'logo_gelb.png', :class => "logo", :height => "20px" %>
   </div>
+  <div class="main_menu">
+    <%#= link_to "Band" %>
+    <%#= link_to "Bandshop" %>
+  </div>
   <div class="logged_user">
     <% if current_user.avatar? %>
       <%= image_tag current_user.avatar.url(:thumb), :class => "profile_image" %>
     <% else %>
-      <%= image_tag 'no_prof_img.png', :class => "profile_image" %>
+      <%= link_to image_tag('no_prof_img.png', :class => "profile_image"), edit_user_registration_path %>
     <% end %>
     
     <% if user_signed_in? %>
@@ -17,6 +21,10 @@
   </div>
   <div class="vert_line"></div>
   <div class="logout">
-    <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+    <% if user_signed_in? %>
+      <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Log In" %>
+    <% end %>
   </div>
 </div>

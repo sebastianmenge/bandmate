@@ -1,9 +1,69 @@
 #registrations_controller {
 	
-.update_user {
-	height: 30px;
-	width: 200px;
+.sign_up_container {
+	padding: 1px;
+	margin-top: 20px;
+	background: white;
+	width: 960px;
+	height:600px;
+	@include center;
+	@include round-all(5px);
+}
+
+.reg_header {
+	font-size: 22px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.form_container {
+	color: #717171;
 	display: inline-block;
+	width: 520px;
+	margin-top: 70px;
+	margin-left: 160px;
+	text-align: right;
+	//border: 1px solid black;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	font-family: arial;
+	font-size: 19px;
+	font-weight: bold;
+	color: black;
+    width: 300px;
+	height: 35px;
+    //background: #f1f1f1 !important;
+    margin-bottom: 30px;
+	margin-left: 10px;
+	padding-left: 6px;
+	padding-bottom: 1px;
+	border: 0px;
+    border: 1px solid #777777;
+	outline: none;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+	font-family: arial;
+	font-size: 19px;
+	font-weight: bold;
+	color: black;
+    width: 300px;
+	height: 35px;
+    background: white;
+    margin-bottom: 30px;
+	margin-left: 10px;
+	padding-left: 6px;
+	padding-bottom: 1px;
+    border: 1px solid #777777;
+	outline: none;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	box-shadow: 0 0 10px rgba(235, 199, 0, 1);
+			    -webkit-box-shadow: 0 0 10px rgba(235, 199, 0, 1); 
+			    -moz-box-shadow: 0 0 10px rgba(235, 199, 0, 1);
 }
 	
 	

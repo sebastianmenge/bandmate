@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
-  before_filter :authenticate_user!
+  layout "start"
+  
+  def index
+  end
 
   def agb
   end

@@ -34,12 +34,30 @@ $(document).ready(function() {
 	// $('.post').hover(function() { 
 	// 	$("#arrow_posts").show();
 	// });
+	
+	$('.post').hover(function() {
+		post_id = this.id.split("_").splice(2,2,"")[1];
+		band_id = this.id.split("_").splice(0,2,"")[1];
+		$(".arrow_posts").hide();
+		$(this).find(".arrow_posts").show();
+	});
 		
-	$('.post').click(function() { 
-	 	post_id = this.id.split("_")[1];
-	 	$('#postzoom').load("/bands/1/posts/" + post_id);
+	$('.post').click(function() {
+		post_id = this.id.split("_").splice(2,2,"")[1];
+		band_id = this.id.split("_").splice(0,2,"")[1];
+	 	$('#postzoom').load("/bands/" + band_id + "/posts/" + post_id);
 		$('.post').removeClass("post_selected");
-		$("#post_" + post_id).addClass("post_selected");
+		$(this).addClass("post_selected");
+		$('.post').find(".arrow_posts").animate({
+				right: "15px",
+			}, 100);
+		$(this).find(".arrow_posts").animate({
+				right: "0px",
+			}, 100);
+	});
+	
+	$('#posts').mouseleave(function() {
+		$(".arrow_posts").hide();
 	});
 	
 

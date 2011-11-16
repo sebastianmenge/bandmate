@@ -7,17 +7,19 @@ html { height: 100%;}
 
 body { 
 	margin:0px;
-	font-family: helvetica;
+	font-family: arial;
 	height: 100%;
 	background: $bg-main;
 }
 
-.flash_alert {
-	color:red;
-	background: $bg-main;
+
+
+// Center Elements
+
+@mixin center {
 	margin-left: auto;
 	margin-right: auto;
-	padding: 5px;
+	
 }
 
 /* Round Corners */

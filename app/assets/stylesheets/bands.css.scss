@@ -7,17 +7,8 @@
 body {
 	background: $bg-main;
 }
-	
-a {
-	color: #222222;
- 	text-decoration: none;
-	font-size: 14px;
-	&:hover {
-		color: #ececec; 
-		text-decoration: none;
-		font-size: 14px;		
-  }
-}
+
+
 
 .headers {
 	width: 100%;
@@ -25,15 +16,19 @@ a {
 }
 
 #band_header {
+	border-top: 2px solid #e5e5e5;
 	z-index: 49;
 	position: relative;
-	background: #c7c7c7;
+	//background: #c7c7c7;
 	width: 100%;
-	height: 45px;
+	height: 40px;
 	margin-top: 0px;
 	@include round-bottom-left(5px);
 	@include round-bottom-right(5px);
-	box-shadow: rgba(0, 0, 0, 0.80) 0px 2px 7px;
+	box-shadow: rgba(0, 0, 0, 0.90) 0px 1px 7px;
+	background: -webkit-gradient(linear, left top, left bottom, 
+	                             from(#d6d6d6), to(#c0bfbf));
+	                              
 }
 
 #band_menu {
@@ -41,10 +36,21 @@ a {
 }
 
 #band_menu ul {
-	font-weight: bold;
-	font-size: 15px;
 	margin-left: 22px;
-	padding-top: 14px;
+	padding-top: 11px;
+	float: left;
+	a {
+		color: #131313;
+	 	text-decoration: none;
+		font-size: 13px;
+		font-weight: 600;
+		text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+		&:hover {
+			color: #4f4f4f; 
+			text-decoration: none;
+			font-weight: 600;
+	  }
+	}
 }
 
 #band_menu ul li{
@@ -55,87 +61,116 @@ a {
 
 .triangle {
 	position: absolute;
-	left: 30px;
-	top: 65px;
-	z-index: 49;
+	left: 15px;
+	top: -9px;
+	z-index: 55;
 }
 
 #section_head_bg {
 	display: inline;
 	position: absolute;
-	right: 53px;
+	right: 15px;
 	top: 0px;
 	font-size: 15px;
 	padding: 0px 12px 0px 12px;
-	height: 45px;
+	height: 40px;
 }
 
 .bandname_wrap {
-	margin-top: 12px;
+	margin-top: 13px;
 }
 
 .select_arrow {
 	float: left;
-	margin-top: 8px;
-	margin-right: 10px;
+	margin-top: 6px;
+	margin-right: 7px;
 	cursor: pointer;
 }
 
 .section_head {
 	display: inline;
 	white-space: nowrap;
-	font-size: 18px;
-	font-weight: 600;
 	float: left;
 	cursor: pointer;
+	a {
+		color: #292929;
+	 	text-decoration: none;
+		font-size: 16px;
+		font-weight: 600;
+		text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
+		&:hover {
+			color: #666666; 
+			text-decoration: none;
+			font-weight: 600;
+	  }
+	}
 }
 
 .settings {
-	position: absolute;
-	right:24px;
-	top: 14px;
-	width: 18px;
+	width: 13px;
 	
 }
 
 #band_selector {
-	width: 240px;
-	height: 150px;
-	z-index: 55;
+	z-index: 40;
 	position: absolute;
-	right: 53px;
-	top: 45px;
+	right: 30px;
+	top: -200px;
 	background: white;
-	//border: 1px solid #6d6d6d;
-	border-top: 0px solid #6d6d6d;
-	@include round-bottom-left(5px);
-	@include round-bottom-right(5px);
+	@include round-bottom-left(3px);
+	@include round-bottom-right(3px);
 	box-shadow: rgba(0, 0, 0, 0.60) 0px 3px 6px;
-	display: none;
+	//display: none;
+	padding: 15px 0px 10px 0px;
+	a {
+		color: black;
+		font-size: 13px;
+		font-weight: 400;
+		text-decoration: none;
+		padding: 5px 30px 5px 30px;
+		&:hover {
+			color: #828282;
+			font-weight: 400;
+			//background: #dedede;
+			padding: 5px 30px 5px 30px;
+			width: 100%;
+		}
+	}
 }
 
-.member_container {
-	float: left;
-	margin-top: 7px;
-	margin-right: 10px;
+#band_selector ul li {
+	list-style-type: none;
+	margin-top: 5px;
+	
 }
 
-.member_name {
-	font-size: 10px;
-	text-align: center;
+#deine_bands {
+	margin-left: 30px;
 }
 
-.member_image {
-	height: 40px;
-	width: 40px;
-	margin-top: 1px;
-	border: 1px solid #b7b7b7;
-	@include round-all(7px);
+#band_list {
+	margin-left: 30px;
 }
+
+.band_sel_sep {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	height: 1px;
+	background: rgba(0, 0, 0, 0.2);
+	width: 100%;
+}
+
+.neue_band {
+	margin-top: 0px;
+	
+}
+
+
 
 /* Main Content */
 
 .overview_container {
+	position: relative;
 	width: 98%;
 	height: 600px;
 	background: white;
@@ -146,108 +181,9 @@ a {
 	margin-right: auto;
 }
 
-//.side_menu {
-//	height: 100%;
-//	width: 80%;
-//	background: #fbfbfb;
-//	@include round-all(7px);
-//	box-shadow: 
-//	  rgba(0, 0, 0, 0.70) 3px 0px 5px
-//}
 
 
 
 
 
-/* HEADER */
-
-
-#top_menu_1 {
-	width: 100%;
-	height: 30px;
-	border-top:1px solid #3c3c3c;
-	border-bottom:1px solid #111111;
-	background: black;
-	/*background: 
-		  -webkit-gradient(linear, left top, left bottom, 
-		                   from(#313131), to(#000000));*/
-	padding: 0px;
-}
-
-.logo {
-	margin-top: 3px;
-	margin-left: 12px;
-	float: left;
-	height: 18px;
-}
-
-nav {
-	margin-top: 16px;
-	margin-left: 30px;
-	float:left;
-}
-
-nav ul li {
-	list-style-type: none;
-	display: inline-block;
-	padding-right: 20px;
-	font-size: 17px;
-	color: white;
-}
-
-.profile_image {
-	width: 20px;
-	float: left;
-	margin-right: 10px;
-	margin-top: -1px;
-	@include round-all(2px)
-}
-
-.logged_in_as {
-	color: #747474;
-	font-size: 13px;
-	float:left;
-	margin-right: 10px;
-	margin-top: 2px;
-}
-
-.logged_user {
-	display: inline;
-	position: absolute; right:0px;
-	float:left;
-	margin-right: 84px;
-	margin-top: 6px;
-	a {
-		color: #7e7e7e;
-		font-size: 13px;
-		&:hover {
-			text-decoration: none;
-			color: #b1b1b1;
-		}
-	}
-}
-
-.vert_line {
-	position: absolute; 
-	right:75px;
-	top: 9px;
-	width: 1px;
-	height: 15px;
-	background: #7e7e7e;
-}
-
-.logout {
-	position: absolute; 
-	right:24px;
-	top: 7px;
-	a {
-		color: #7e7e7e;
-		font-size: 13px;
-		font-weight: 500;
-		&:hover {
-			text-decoration: none;
-			color: #b1b1b1;
-		}
-	}
-}
 

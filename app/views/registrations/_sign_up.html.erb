@@ -4,20 +4,25 @@
     <%= devise_error_messages! %>
 
     <div>
-    <%= f.text_field :username, :placeholder => "Vollständiger Name" %></div>
+    <%= f.label ("Benutzername:") %>
+    <%= f.text_field :username %></div>
 
     <div>
-    <%= f.email_field :email, :placeholder => "E-Mail" %></div>
+    <%= f.label("E-Mail:") %>      
+    <%= f.email_field :email %></div>
 
     <div>
-    <%= f.password_field :password, :placeholder => "Passwort" %></div>
+    <%= f.label ("Passwort:") %>
+    <%= f.password_field :password %></div>
 
     <div>
-    <%= f.password_field :password_confirmation, :placeholder => "Passwort wiederholen" %></div>
+        <%= f.label ("Passwort wiederholen:") %>
+    <%= f.password_field :password_confirmation %></div>
     
     <div>
       <%= f.fields_for :bands do |band_form| %>
-        <%= band_form.text_field :name, :placeholder => "Bandname" %>
+        <%= band_form.label ("Bandname:") %>
+        <%= band_form.text_field :name %>
       <% end %>
     </div>
 

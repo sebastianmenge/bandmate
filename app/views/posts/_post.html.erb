@@ -1,5 +1,5 @@
 <div id="post_wrap">
-  <div class="post" id="post_<%= "#{post.id}" %>">
+  <div class="post" id="band_<%= "#{@band.id}" %>_post_<%= "#{post.id}" %>">
     <div>
       <% if current_user.avatar? %>
         <%= image_tag current_user.avatar.url(:thumb), :class => "profile_image_small" %>
@@ -9,12 +9,12 @@
       </div>
     <div class="username"> <%= current_user.username.split.first %></div>
     <div class="posted_at"><%= time_ago_in_words(post.created_at) %> ago</div>
-    <div id="arrow_posts"><%= image_tag "arrow_posts.png" %></div>
+    <div class="arrow_posts"><%= image_tag "arrow_posts.png" %></div>
     <div class="content"><%= auto_link(simple_format(post.content.gsub("\r\n", "<br />"), {}, :sanitize => true))
     %></div>
     
 
   
-    <%#= link_to (image_tag "close_x.gif"), [@band, post], confirm: 'Are you sure?', method: :delete, :class => "delete_link" %>
+    
   </div>
 </div>

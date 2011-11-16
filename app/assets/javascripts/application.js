@@ -13,26 +13,43 @@ jQuery.ajaxSetup({
 })
 
 
+
 $(document).ready(function() {
- 
-	// $("#band_menu ul li:nth-child(2)").click(function() {
-	// 				$(".triangle").css("margin-left", "100px");
-	// 			});
 	
-	// $("#section_head_bg").mouseover(function() {
-	// 		$(this).css("background", "#ababab");
-	// 	});
+	// $(".select_arrow, .section_head").toggle( 
+	// 	function () { 
+	//         	$("#band_selector").animate({top: "+70px"}, 200, "swing");
+	//         }, 
+	//     function () { 
+	//         	$("#band_selector").animate({top: "-70px"}, 500, "swing");
+	//      	} 
+	// );
+	// 
+	// $("html").click(function(){ 
+	//     $("#band_selector:visible").animate({top: "-70px"}, 500, "swing");
+	// });
 	
+	var bandSelectorOpen = false;
+	
+	function toggleBandSelector(closeOnly) {
+	  if (closeOnly == null) closeOnly = false;
+	  if (bandSelectorOpen == false && closeOnly == false) {
+	    $("#band_selector").animate({top: "+70px"}, 200, "swing");
+	    bandSelectorOpen = true;
+	  } else {
+	    $("#band_selector").animate({top: "-200px"}, 300, "swing");    
+	    bandSelectorOpen = false;
+	  }
+	}
+
 	$(".select_arrow, .section_head").click(function() {
-		$("#band_selector").show();
-		$("#section_head_bg").css("background", "white");
+	  toggleBandSelector(); 
+	  return false;
+	}); 
+
+	$("html").click(function(){ 
+	  toggleBandSelector(true)
 	});
-	
-	$("#band_selector").mouseout(function() {
-		$(this).hide();
-		$("#section_head_bg").css("background", "");
-	});
-	
 	
 
 

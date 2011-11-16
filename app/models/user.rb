@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
                   :remember_me, :avatar, :bands_attributes
   
   has_many :bands
+  has_many :posts
   accepts_nested_attributes_for :bands
   
   has_attached_file :avatar, 

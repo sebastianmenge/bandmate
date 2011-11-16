@@ -4,7 +4,8 @@ class PostsController < ApplicationController
   before_filter :find_post_by_id, :only => [:show, :destroy]
   
   def index
-    setup_posts
+    @posts = @band.posts.all
+    @post ||= Post.new
   end
   
   def create
@@ -15,7 +16,6 @@ class PostsController < ApplicationController
         format.html { redirect_to posts_path }
         format.js
       else
-        setup_posts
         format.html { render :action => :index }
         format.js
       end
@@ -24,28 +24,30 @@ class PostsController < ApplicationController
   
   def show
     find_post_by_id
+    
+    respond_to do |format|
+     format.html {}
+     format.js {
+       render :layout => false
+     }
+    end
   end
   
   def destroy
     @post = Post.find(params[:id])   
     @post.destroy
-    redirect_to bandstream_path
+    redirect_to band_posts_path
   end
   
   
   protected
   
   def find_band_by_id
-    @band = Band.find(params[:band_id])
+    @band = current_user.bands.find(params[:band_id])
   end
   
   def find_post_by_id
-    @post = Post.find(params[:id])    
-  end
-  
-  def setup_posts
-    @posts = Post.all
-    @post ||= Post.new
+    @post = @band.posts.find(params[:id])    
   end
 
 end

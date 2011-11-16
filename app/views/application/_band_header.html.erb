@@ -1,28 +1,37 @@
 <div id="band_header">
   <div id="band_menu">
   <ul>
-    <li><%= link_to "Übersicht", band_path(current_user) %></li>
+    <li><%= link_to "Übersicht", band_path(@band) %></li>
     <li><%= link_to "Bandstream", band_posts_path(@band) %></li>
+    <li><%= link_to "Songs/Alben" %></li>
     <li><%= link_to "Konzerte/Tour" %></li>
+    <li><%= link_to "Merchandise" %></li>    
     <li><%= link_to "Bandkasse" %></li>
-    <li><%= link_to "Setlists" %></li>
     <li><%= link_to "Notizen" %></li>
-    <li><%= link_to "Merch" %></li>
-    <li><%= link_to "GEMA/Lizensierung" %></li>
+    <li>|</li>
+    <li><%= link_to "View Public Profile" %></li>
   </ul>
-  
   </div>
   <div id="section_head_bg">
     <div class="bandname_wrap">
       <%= image_tag 'select_arrow.png', :class => 'select_arrow' %>
-      <p class="section_head"><%= @band.name  %></p>
+      <p class="section_head"><%= link_to @band.name.upcase  %></p>
       
     </div>
   </div>
-  <div>
-    <%= image_tag 'settings.png', :class => 'settings' %>
-  </div>
-  <div id="band_selector">
-    
-  </div>
+</div>
+<div id="band_selector">
+  <ul>
+  <li><%= link_to "Einstellungen", edit_band_path(@band) %></li>
+  <li><%= link_to "Werkzeuge" %></li>
+  </ul>
+  <div class="band_sel_sep"></div>
+  <h5 id="deine_bands">Deine Band(s):</h3>
+  <% current_user.bands.each do |band| %>
+    <ul id="band_list">
+      <li><%#= image_tag 'active_band.png' %><%= link_to band.name, band_path(band) %></li>
+    </ul>
+  <% end %>
+  <div class="band_sel_sep"></div>
+  <div class="neue_band"><%= link_to "+ neue Band hinzufügen", new_band_path() %></div>
 </div>

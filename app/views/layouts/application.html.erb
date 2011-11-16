@@ -2,24 +2,19 @@
 <html>
   <head>
     <title><%= yield :title %></title>
-    <%= stylesheet_link_tag "application" %>
+    <%= stylesheet_link_tag 'application' %>
     <style type="text/css"><%= yield :stylesheets %></style>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
   <body id="<%= params[:controller].parameterize %>_controller">
-    <% flash.each do |key, value| %>
-      <div class="flash_alert <%= key %>"><%= value %></div>
-    <% end %>
-  
     <div class="headers">
       <%= render "header" %>
+      <%= render "application/flashes" %>
       <%= render "band_header" %>
     </div>
-    <div>
+    <div data-pjax-container>
       <%= yield %>
     </div>
-    
-  
   </body>
 </html>

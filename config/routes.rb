@@ -1,4 +1,6 @@
 Bandmate::Application.routes.draw do
+  
+  
 
   devise_for :users,
   :controllers => { :registrations => "registrations" }
@@ -7,15 +9,20 @@ Bandmate::Application.routes.draw do
     resources :posts
   end
   
-  devise_scope :user do
-    root :to => "devise/sessions#new"
-  end
-  
-  #match '/bands/:id' => "bands#show", :as => :user_root
-  
-  #match '/profile', :to => 'pages#show_user', :as => 'profile'
+  match 'start' => 'bands#index', :as => :user_root, 
+                                  :defaults => { :first_band => true }
 
   get "pages/agb"
+  
+  get "pages/index"
+  
+  devise_scope :user do
+    get "sign_in" => "devise/sessions#new", :as => "sign_in"
+    get "sign_up" => "registrations#new"
+    #root :to => "pages/index"
+  end
+  
+  root :to => "pages#index"#, :as => "/"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

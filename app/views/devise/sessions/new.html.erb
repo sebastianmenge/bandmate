@@ -4,23 +4,9 @@
 
 
 <div class="start_container">
-  <%= image_tag 'logo_gelb.png', :width => "168px", :class => "logo"%><br>
-    <div class="anmelden">
-      <%= render :partial => "login_form"%>
-    </div>
-      
-      <div class="intro_text">
-        <p>Behalte alles im Überblick<br /> Kosten, Konzerte etc.. <br/>
-          <strong>schnell und einfach</strong></p>
-      </div><nobr>
-      <div class="signup_container">
-        <div id="signup">
-          <p class="not_signed_up">
-            Noch nicht angemeldet?<em> Mach mit.</em></p>
-            <%= render :partial => "registrations/sign_up" %>
-        </div>
-      </div>
-    </div>
+  <div class="anmelden">
+    <%= render :partial => "login_form"%>
+  </div>
 </div>
 <footer>
   <nav>

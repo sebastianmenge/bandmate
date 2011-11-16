@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
 
 gem "devise", "~> 1.4.7"
 
@@ -14,9 +14,9 @@ gem "rails_autolink"
 
 gem "friendly_id4", "4.0.0.beta3", :require => "friendly_id"
 
-gem "babosa", "~> 0.3.5"
+gem "aws-s3", "~> 0.6.2"
 
-gem "RedCloth", "~> 4.2.8"
+
 
 
 
@@ -34,8 +34,8 @@ gem 'json'
 
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails', "  ~> 3.1.4"
+  gem 'coffee-rails', "~> 3.1.1"
   gem 'uglifier'
 end
 

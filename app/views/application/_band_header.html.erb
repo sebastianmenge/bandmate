@@ -1,4 +1,4 @@
-<div id="band_header">
+<div class="band_header">
   <div id="band_menu">
   <ul>
     <li><%= link_to "Übersicht", band_path(@band) %></li>
@@ -9,7 +9,7 @@
     <li><%= link_to "Bandkasse" %></li>
     <li><%= link_to "Notizen" %></li>
     <li>|</li>
-    <li><%= link_to "View Public Profile" %></li>
+    <li><%= link_to "View Public Profile", band_bandprofile_path(@band) %></li>
   </ul>
   </div>
   <div id="section_head_bg">

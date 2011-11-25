@@ -1,0 +1,150 @@
+#public_profiles_controller {
+
+#public_container {
+	position: relative;
+	width: 960px;
+	height: 2000px;
+	//background: white;
+	@include center;
+}
+
+#header_container {
+	position: relative;
+	@include center;
+	width: 960px;
+	margin-bottom: -4px;
+}
+
+.public_header {
+	width: 958px;
+	height: 140px;
+	border: 1px dashed #5b5b5b;
+	text-align: center;
+}
+
+input[type=file] {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.upload {
+	margin-top: 30px;
+	color: #909090;
+}
+
+.limits {
+	font-size: 10px;
+	color: black;
+	margin-bottom: 15px;
+}
+
+.upload input[type=submit] {
+	color: #303030;
+	font-size: 13px;
+	font-weight: 400;
+	font-family: arial;
+    background: white;
+	border: 1px solid black;
+	padding: 3px;
+	@include round-all(3px);
+}
+
+#farben {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: 400;
+	color: white;
+	background:black;
+	position: fixed;
+	left: 700px;
+	bottom: 0px;
+	text-decoration: none;
+	padding: 8px;
+	@include round-top-left(3px);
+	@include round-top-right(3px);
+}
+
+#farbselektor {
+	position: fixed;
+	bottom: -350px;
+	left: 520px;
+	width: 350px;
+	height: 300px;
+	background: rgba(255, 255, 255, 1);
+	border: 2px solid rgba(0, 0, 0, .6);
+	border-bottom: 0px;
+	@include round-top-right(5px);
+	@include round-top-left(5px);
+	box-shadow: rgba(0, 0, 0, .6) 0px 0px 5px;
+	font-size: 11px;
+	color: #7a7a7a;
+}
+
+#colorpicker {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.res_can {
+	margin-left: 60px;
+	margin-top: 24px;
+	margin-right: 30px;
+	font-size: 13px;
+	color: #6c6c6c;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+#cancel, #reset {
+	cursor: pointer;
+	float: left;
+	margin-right: 30px;
+}
+
+.farbform {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+#farbselektor input[type=text] {
+	text-align: center;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: 400;
+	color: black;
+    width: 70px;
+	height: 20px;
+    margin-bottom: 15px;
+    margin-top: 3px;
+	padding-right: 1px;
+    border: 2px solid rgba(119, 119, 119, .3);
+	@include round-all(3px)
+}
+
+#farbselektor input[type=text]:focus {
+	text-align: center;
+	font-family: arial;
+	font-size: 15px;
+	font-weight: 400;
+	color: black;
+    width: 70px;
+	height: 20px;
+    margin-bottom: 15px;
+    margin-top: 3px;
+	padding-right: 1px;
+    border: 2px solid black;
+	@include round-all(3px)
+}
+
+
+
+
+
+
+
+
+
+
+}

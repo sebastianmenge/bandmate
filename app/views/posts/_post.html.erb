@@ -1,20 +1,14 @@
-<div id="post_wrap">
+<div class="post_wrap">
   <div class="post" id="band_<%= "#{@band.id}" %>_post_<%= "#{post.id}" %>">
-    <div>
-      <% if current_user.avatar? %>
-        <%= image_tag current_user.avatar.url(:thumb), :class => "profile_image_small" %>
-      <% else %>
-        <%= image_tag 'no_prof_img.png', :class => "profile_image_small" %>
-      <% end %>
-      </div>
+    <div class="delete_link"><%= link_to (image_tag "close_x.gif"), confirm: 'Are you sure?', :method => :delete %></div>
+    <% if current_user.avatar? %>
+      <%= image_tag current_user.avatar.url(:original), :class => "profile_image_small" %>
+    <% else %>
+      <%= image_tag 'no_prof_img.png', :class => "profile_image_small" %>
+    <% end %>
     <div class="username"> <%= current_user.username.split.first %></div>
     <div class="posted_at"><%= time_ago_in_words(post.created_at) %> ago</div>
-    <div class="arrow_posts"><%= image_tag "arrow_posts.png" %></div>
     <div class="content"><%= auto_link(simple_format(post.content.gsub("\r\n", "<br />"), {}, :sanitize => true))
-    %></div>
-    
-
-  
-    
+      %></div>
   </div>
 </div>

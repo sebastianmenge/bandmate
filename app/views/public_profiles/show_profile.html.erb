@@ -1,0 +1,57 @@
+<%= title "#{@band.name}"%>
+
+<div id="header_container">
+  <% if user_signed_in? %>
+    <% if @band.header? %>
+      <%= image_tag @band.header.url(:original) %>
+    <% else %>
+      <div class="public_header">
+        <div class="upload">
+          <%= form_for (@band) do |f| %>
+          <p>Persönliches Menübild hochladen</p>
+          <div><%= f.file_field :header, :id => 'header_input' %></div>
+          <p class="limits">Breite: 960px Höhe: 40-140px / Max. Dateigröße: 2MB</p>
+          <%= f.submit "Speichern" %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <!-- other stuff -->
+  <% end %>
+</div>
+
+<div id="public_container" style="background: <%= @band.maincolor %>">
+  <div id="farben">
+    <% if user_signed_in? %>
+      <p>Design anpassen</p>
+    <% end %>
+  </div>
+</div>
+  
+
+<div id="farbselektor">
+  <div id="colorpicker"></div>
+  <div class="res_can">
+    <p id="reset">Reset</p>
+    <p id="cancel">Abbrechen</p>
+  </div>
+  <div class="farbform">
+    <%= form_for (@band) do |f| %>
+      <div><%= f.label :bgcolor, "Hintergrundfarbe" %></div>
+      <div><%= f.text_field :bgcolor, :id => 'bgcolor' %></div>
+    
+      <div><%= f.label :maincolor, "Hauptfarbe" %></div>
+      <div><%= f.text_field :maincolor, :id => 'maincolor' %></div>
+    
+      <div><%= f.label :textcolor, "Textfarbe" %></div>
+      <div><%= f.text_field :textcolor, :id => 'textcolor' %></div>
+    
+      <div><%= f.label :linkcolor, "Linkfarbe" %></div>
+      <div><%= f.text_field :linkcolor, :id => 'linkcolor' %></div>
+    
+      <%= f.submit "Speichern" %>
+    <% end %>
+  </div>
+</div>
+

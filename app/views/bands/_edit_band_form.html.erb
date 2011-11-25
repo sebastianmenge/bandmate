@@ -1,0 +1,23 @@
+<%= form_for (@band) do |f| %>
+
+  <table id="band_edit" border="0">
+    <col />
+    <tr>
+      <td><%= f.label :Bandname %></td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><%= f.label :header, "Menühintergrund" %></td>
+      <td class="align_left"><%= f.file_field :header %></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td class="align_left delete_band"><%= link_to @band.name + ' entgültig löschen.', @band, confirm: 'Are you sure?', :method => :delete %></td>
+    </tr>
+  </table>
+    <div> <%= f.submit "Speichern" %></div>
+<% end %>

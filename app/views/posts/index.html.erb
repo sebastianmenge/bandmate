@@ -1,18 +1,14 @@
 <%= title "#{current_user.username} @ #{ @band.name } | bandmate "%>
 
 <%= image_tag 'triangle_white.png', :class => 'triangle_posts' %>
-<div class="posts_container">
-  <div id="posts_wrap">
+
+  
     <div class="post_it_container">
-      <h4 class="news">Neuigkeiten?</h4>
+      <h5 class="news">Was gibt's neues?</h5>
       <%= render :partial => 'form', :locals => {:post => @post} %>
     </div>
   
-    <div id="posts">
-      <%= render :collection => @posts, :partial => "post" %>
-    </div>
+  <div id="posts">
+    <%= render :collection => @posts, :partial => "post" %>
   </div>
-  <div id="postzoom">
-   
-  </div>
-</div>
+  

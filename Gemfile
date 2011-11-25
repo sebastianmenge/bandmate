@@ -16,6 +16,8 @@ gem "friendly_id4", "4.0.0.beta3", :require => "friendly_id"
 
 gem "aws-s3", "~> 0.6.2"
 
+gem "wav-mp3", "~> 0.0.4"
+
 
 
 

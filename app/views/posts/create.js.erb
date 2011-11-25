@@ -2,12 +2,13 @@ $("#posts").prepend(" <%= escape_javascript(render(:partial => @post )) %> ");
 $('#post_button').attr('value', 'Post it');
 $('#post_button').attr('disabled', null);
 $('#post_wrap').hide().fadeIn(500);
+$("#new_post")[0].reset();
 	
 setTimeout(function() {
 	$("textarea").animate({
-		height: "20px",
+		height: "18px",
 		}, 100 );
 	$("#post_button").hide();
-	$("#new_post")[0].reset();
 	
-}, 1500);
+	
+}, 500);

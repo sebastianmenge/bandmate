@@ -1,4 +1,17 @@
 $(document).ready(function() {
+	
+	currentHeight = $(window).height() - 96 + 'px';
+	currentWidth = $(window).width() - 650 + 'px';
+
+	//     $(window).load(function () { 
+	//       $('.post_it_container').height(currentHeight);
+	// return false;
+	//     });
+
+	// $(window).load(function () { 
+	//       $('#posts').width(currentWidth);
+	// return false;
+	//     });
  
 	$("#new_post").submit(function() {
 		$('#post_button').attr('disabled', 'disabled');
@@ -31,9 +44,9 @@ $(document).ready(function() {
 			$("#post_button").hide();
 	});
 	
-	// $('.post').hover(function() { 
-	// 	$("#arrow_posts").show();
-	// });
+	$('.post').hover(function() { 
+		$("#arrow_posts").show();
+	});
 	
 	$('.post').hover(function() {
 		post_id = this.id.split("_").splice(2,2,"")[1];
@@ -54,10 +67,6 @@ $(document).ready(function() {
 		$(this).find(".arrow_posts").animate({
 				right: "0px",
 			}, 100);
-	});
-	
-	$('#posts').mouseleave(function() {
-		$(".arrow_posts").hide();
 	});
 	
 

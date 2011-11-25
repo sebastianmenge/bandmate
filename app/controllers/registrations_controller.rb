@@ -2,7 +2,6 @@ class RegistrationsController < Devise::RegistrationsController
   layout "start"
   
   def update
-    
     params[resource_name].delete(:password) if params[resource_name][:password].blank?
     params[resource_name].delete(:password_confirmation) if params[resource_name][:password_confirmation].blank?
     # Override Devise to use update_attributes instead of update_with_password.

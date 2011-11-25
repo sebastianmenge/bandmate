@@ -21,8 +21,11 @@
     
     <div>
       <%= f.fields_for :bands do |band_form| %>
-        <%= band_form.label ("Bandname:") %>
+        <%= band_form.label :name ("Bandname:") %>
         <%= band_form.text_field :name %>
+        
+        <%= band_form.hidden_field :bgcolor, :value => '#898989' %>
+        <%= band_form.hidden_field :maincolor, :value => '#ffffff' %>
       <% end %>
     </div>
 

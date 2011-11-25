@@ -34,14 +34,23 @@ class BandsController < ApplicationController
     @band = current_user.bands.find(params[:id])
   end
   
-  def destroy
-    @band = Band.find(params[:id])
-    @band.destroy
-    redirect_to @band, :flash => { :notice => "Band destroyed"}
+  def update
+    @band = current_user.bands.find(params[:id])
+    if @band.update_attributes(params[:band])
+      redirect_to @band, :flash => { :success => "updated" }
+    else
+      render 'edit'
+    end
   end
   
-  def delete_active_band
-    
+  def destroy
+    @band = current_user.bands.find(params[:id])
+    @band.destroy
+    if current_user.bands.any?
+      redirect_to band_path(current_user.bands.first), :flash => { :notice => "#{@band.name} deleted"}
+    else
+      redirect_to new_band_path, :flash => { :notice => "#{@band.name} deleted"}
+    end
   end
 
 end

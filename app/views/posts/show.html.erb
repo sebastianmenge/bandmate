@@ -4,7 +4,7 @@
     <% else %>
       <%= image_tag 'no_prof_img.png', :class => "profile_image_zoom" %>
     <% end %>
-    <%= link_to (image_tag "close_x.gif"), @posts, confirm: 'Are you sure?', :method => :delete, :class => "delete_link" %>
+    
     </div>
   <div class="username_zoom"> <%= current_user.username.split.first %></div>
   <div class="posted_at_zoom"><%= time_ago_in_words(@post.created_at) %> ago</div>

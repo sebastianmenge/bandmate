@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110151826) do
+ActiveRecord::Schema.define(:version => 20111124171014) do
 
   create_table "bands", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(:version => 20111110151826) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "header_file_name"
+    t.string   "header_content_type"
+    t.integer  "header_file_size"
+    t.datetime "header_updated_at"
+    t.string   "bgcolor"
+    t.string   "maincolor"
+    t.string   "textcolor"
+    t.string   "linkcolor"
   end
 
   add_index "bands", ["slug"], :name => "index_bands_on_slug", :unique => true

@@ -15,20 +15,7 @@ jQuery.ajaxSetup({
 
 
 $(document).ready(function() {
-	
-	// $(".select_arrow, .section_head").toggle( 
-	// 	function () { 
-	//         	$("#band_selector").animate({top: "+70px"}, 200, "swing");
-	//         }, 
-	//     function () { 
-	//         	$("#band_selector").animate({top: "-70px"}, 500, "swing");
-	//      	} 
-	// );
-	// 
-	// $("html").click(function(){ 
-	//     $("#band_selector:visible").animate({top: "-70px"}, 500, "swing");
-	// });
-	
+		
 	var bandSelectorOpen = false;
 	
 	function toggleBandSelector(closeOnly) {

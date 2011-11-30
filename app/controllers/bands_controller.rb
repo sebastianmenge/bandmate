@@ -18,7 +18,6 @@ class BandsController < ApplicationController
   
   def create
     @band = current_user.bands.build(params[:band])
-    #@band = Band.new(params[:band])
     if @band.save
       redirect_to @band, :flash => { :success => "Band Created!" }
     else
@@ -37,7 +36,7 @@ class BandsController < ApplicationController
   def update
     @band = current_user.bands.find(params[:id])
     if @band.update_attributes(params[:band])
-      redirect_to @band, :flash => { :success => "updated" }
+      redirect_to band_bandprofile_path(@band), :flash => { :success => "updated" }
     else
       render 'edit'
     end

@@ -10,10 +10,12 @@ class PostsController < ApplicationController
   
   def create
     @post = @band.posts.build(params[:post])
+    @post = current_user.posts.create(params[:post])
+    
     
     respond_to do |format|
       if @post.save
-        format.html { redirect_to posts_path }
+        format.html { redirect_to band_posts_path }
         format.js
       else
         format.html { render :action => :index }

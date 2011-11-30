@@ -14,8 +14,9 @@ jQuery.ajaxSetup({
 
 
 
+
 $(document).ready(function() {
-		
+			
 	var bandSelectorOpen = false;
 	
 	function toggleBandSelector(closeOnly) {

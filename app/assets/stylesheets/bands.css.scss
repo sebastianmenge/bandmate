@@ -15,7 +15,7 @@ body {
 
 .headers {
 	width: 100%;
-	background: #898989;
+	background: white;
 }
 
 .band_header {
@@ -26,11 +26,11 @@ body {
 	width: 100%;
 	height: 40px;
 	margin-top: 0px;
-	@include round-bottom-left(6px);
-	@include round-bottom-right(6px);
-	box-shadow: rgba(0, 0, 0, 0.90) 0px 1px 7px;
+	@include round-bottom-left(0px);
+	@include round-bottom-right(0px);
+	box-shadow: rgba(0, 0, 0, 0.90) 0px 1px 4px;
 	background: -webkit-gradient(linear, left top, left bottom, 
-	                             from(#d6d6d6), to(#c0bfbf));
+	                             from(#d6d6d6), to(#a6a6a6));
 	                              
 }
 
@@ -49,7 +49,7 @@ body {
 		font-weight: 600;
 		text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 0px;
 		&:hover {
-			color: #4f4f4f; 
+			color: #656565; 
 			text-decoration: none;
 			font-weight: 600;
 	  }
@@ -117,7 +117,7 @@ body {
 #band_selector {
 	z-index: 3;
 	position: absolute;
-	right: 30px;
+	right: 25px;
 	top: -200px;
 	background: white;
 	@include round-bottom-left(3px);

@@ -30,7 +30,7 @@ $(document).ready(function() {
 	  $('#post_button').removeClass('disabled').attr('disabled', false);
 	});
 
-	$("textarea").focus(function() {
+	$("#post_field textarea").focus(function() {
 		$("textarea").animate({
 	    	height: "70px",
 	  		}, 100 );

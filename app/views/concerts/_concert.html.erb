@@ -1,0 +1,35 @@
+<div id="band_<%= "#{@band.id}" %>_concert_<%= "#{concert.id}" %>">
+  <div id="concert_wrap" class="concert">
+    <div class="concert_head">
+      <div class="concert_date float"><%= l concert.eventdate %></div>
+      <div class="concert_locations float">
+        <%= "#{concert.location}, #{concert.city}, #{concert.country}" %>
+      </div>
+      <div class="concert_support"><%= "/w #{concert.support}" %></div>
+      <div class="edit">
+        <%= link_to 'Edititeren', edit_band_concert_path(@band, concert) %>
+        <%#= link_to "Loeschen", concert, :confirm => "Bist du sicher?", :method => :delete %>
+      </div>
+    </div>
+      <div class="concert_adress">
+        <h5>Veranstaltungsadresse:</h5>
+        <%= simple_format(concert.adress.gsub("\r\n", "<br />"), {}, :sanitize => :true) %>
+      </div>
+      <div class="concert_contact">
+        <h5>Kontaktinfo:</h5>
+        <%= simple_format(concert.telephone, {}, :sanitize => :true) %>
+      </div>
+      <div class="concert_notes">
+        <h5>Notizen:</h5>
+        <%= simple_format(concert.notes.gsub("\r\n", "<br />"), {}, :sanitize => :true) %>
+      </div>
+    <div id="street_view_container">
+      <%= image_tag "http://maps.googleapis.com/maps/api/streetview?size=260x130&location=#{concert.adress.split.join(",")}&fov=80&pitch=0&sensor=false" %>
+    </div>
+    <div id="street_view_large">
+      <div id="streetview_img">
+        <%= image_tag "http://maps.googleapis.com/maps/api/streetview?size=640x400&location=#{concert.adress.split.join(",")}&fov=80&pitch=0&sensor=false" %>
+      </div>
+    </div>
+  </div>
+</div>

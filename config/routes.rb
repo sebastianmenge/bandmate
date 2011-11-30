@@ -6,10 +6,10 @@ Bandmate::Application.routes.draw do
   devise_scope :user do
     get "sign_in" => "devise/sessions#new", :as => "sign_in"
     get "sign_up" => "registrations#new"
-    #root :to => "pages/index"
   end
   
   resources :bands do
+    resources :concerts
     resources :posts
     match "/bandprofile" => "public_profiles#show_profile"
   end

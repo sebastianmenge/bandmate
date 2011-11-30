@@ -3,9 +3,13 @@
     <div>
       <%= image_tag 'logo_gelb.png', :class => "logo_start", :height => "20px" %>
     </div>
-    <div class="main_menu">
-      <%#= link_to "Band" %>
-      <%#= link_to "Bandshop" %>
+    <% if user_signed_in? %>
+      <div class="current_band">
+        <%= link_to "Bands", band_path(current_user.bands.first) %>
+      </div>
+    <% end %>
+    <div class="main_menu_start">
+      <%= link_to "Sign Up", new_user_registration_path %>
     </div>
     <!-- <div class="vert_line"></div> -->
     <div class="logout_start">

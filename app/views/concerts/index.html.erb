@@ -1,0 +1,13 @@
+<div id="all_concerts">
+  <h4 class="headline">Alle Konzerte:</h4>
+  <%= render :collection => @concerts, :partial => "concert" %>
+</div>
+
+
+  <div id="new_concerts">
+    <%= render :partial => 'concert_form', :locals => { :concert => @concert } %>
+  </div>
+  
+
+
+

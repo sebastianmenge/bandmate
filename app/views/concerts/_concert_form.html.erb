@@ -1,0 +1,49 @@
+<!-- <h4 class="headline">Konzert/Event erstellen:</h4> -->
+
+<%= form_for [@band, concert], :id => 'new_concert'  do |f| %>
+  
+  <div>
+    <%= f.label :eventdate, 'Datum:' %></br>
+    <%= f.text_field :eventdate %>
+  </div>
+  
+  <div class="float">
+    <%= f.label :location, 'Location:' %></br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="float">
+    <%= f.label :city, 'Stadt:' %></br>
+    <%= f.text_field :city %>
+  </div>
+  <div>
+    <%= f.label :country, 'Land:' %></br>
+    <%= f.text_field :country %>
+  </div>
+  
+  <div id="adress" class="float">
+    <%= f.label :adress, 'Veranstaltungsadresse:' %></br>
+    <%= f.text_area :adress %>
+  </div>
+  
+  <div id="adress">
+    <%= f.label :telephone, 'Kontakt:' %></br>
+    <%= f.text_area :telephone %>
+  </div>
+  
+  <div>
+    <%= f.label :support, 'Vorband(s):' %></br>
+    <%= f.text_field :support %>
+  </div>
+  
+  <div>
+    <%= f.label :notes, 'Notizen:' %></br>
+    <%= f.text_area :notes %>
+  </div>
+  
+  <div class="public">
+    <%= f.check_box :publish %>
+    <%= f.label :publish, 'Konzert/Event auf Profil veröffentlichen' %>
+  </div>
+  
+  <div><%= f.submit 'Erstellen' %></div>
+<% end %>

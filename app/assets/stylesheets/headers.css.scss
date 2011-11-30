@@ -1,4 +1,6 @@
 
+/* FLASH MESSAGES */
+
 #flash_container {
 	z-index: 46;
 	border-left: 2px solid #c3c3c3;
@@ -20,18 +22,22 @@
 	background: $bg-main;
 }
 
+
+
+
+
 // START HEADER
+
 
 #top_menu_1_start {
 	position: relative;
 	width: 100%;
-	height: 30px;
+	height: 80px;
 	border-bottom:1px solid #111111;
 	background: black;
 	background: 
 		  -webkit-gradient(linear, left top, left bottom, 
-		                   from(#313131), to(#000000));
-	//box-shadow: rgba(0, 0, 0, 0.90) 0px 1px 7px;
+		                   from(#292929), to(#000000));
 	padding: 0px;
 	z-index: 49;
 }
@@ -44,29 +50,69 @@
 
 .logo_start {
 	margin-left: 10px;
-	margin-top: 6px;
+	margin-top: 15px;
 	float: left;
-	height: 18px;
+	height: 22px;
 }
 
-.logout_start {
+.main_menu_start {
 	position: absolute; 
-	right:12px;
-	top: 7px;
+	right:75px;
+	top: 18px;
+	display: inline-block;
 	a {
-		color: #7e7e7e;
-		font-size: 13px;
+		color: #b8b8b8;
+		font-size: 15px;
 		text-decoration: none;
 		&:hover {
 			text-decoration: none;
-			color: #b1b1b1;
+			color: #f4f4f4;
 		}
 	}
 }
 
+.current_band {
+	position: absolute; 
+	right:130px;
+	top: 14px;
+	background: #dfc300;
+	margin-right: 15px;
+	padding: 4px 8px 3px 8px;
+	@include round-all(3px);
+	a {
+		color: black;
+		font-size: 15px;
+		text-decoration: none;
+		font-weight: 600;
+		&:hover {
+			text-decoration: none;
+			color: #5f5f5f;
+		}
+	}
+}
+
+
+.logout_start {
+	position: absolute; 
+	right:12px;
+	top: 18px;
+	a {
+		color: #b8b8b8;
+		font-size: 15px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+			color: #f4f4f4;
+		}
+	}
+}
+
+
+
+
 /* PUBLIC PROFILE HEADER */
 
-.main_menu {
+.main_menu_public {
 	display: inline-block;
 	margin-top: 8px;
 	margin-left: 15px;
@@ -80,6 +126,36 @@
 		}
 	}
 }
+
+.logo_public {
+	margin-top: 6px;
+	margin-left: 12px;
+	float: left;
+	height: 18px;
+}
+
+.logout_public {
+	position: absolute; 
+	right:24px;
+	top: 7px;
+	a {
+		color: #b8b8b8;
+		font-size: 13px;
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+			color: #f4f4f4;
+		}
+	}
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -95,9 +171,9 @@
 	height: 30px;
 	//border-bottom:2px solid #474747;
 	background: black;
-//	background: 
-//		  -webkit-gradient(linear, left top, left bottom, 
-//		                   from(#313131), to(#000000));
+	background: 
+		  -webkit-gradient(linear, left top, left bottom, 
+		                   from(#292929), to(#000000));
 	padding: 0px;
 }
 

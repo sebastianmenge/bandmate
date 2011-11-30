@@ -5,6 +5,7 @@
     <%= stylesheet_link_tag "application" %>
     <style type="text/css"><%= yield :stylesheets %></style>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAOzpT3XAa-TaSKeAOL6Z6EgulC285L4kY&sensor=false" %>
     <%= csrf_meta_tags %>
   </head>
   <body id="<%= params[:controller].parameterize %>_controller">

@@ -3,8 +3,8 @@ class Post < ActiveRecord::Base
   
   validates :content, :presence => :true
 
-  belongs_to :band
-  belongs_to :user          
+  belongs_to :band 
+  belongs_to :user  
   
   default_scope :order => 'posts.created_at DESC'
   
@@ -20,5 +20,6 @@ end
 #  band_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer
 #
 

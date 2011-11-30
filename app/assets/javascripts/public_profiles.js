@@ -16,13 +16,9 @@ $(document).ready(function() {
 	
 	widthFarben = $(window).width() / 2 - 58 + 'px';
 
-    $(window).load(function () { 
-      $('#farbselektor').css('left', widthFS)
-    });
+    $('#farbselektor').css('left', widthFS)
+	$('#farben').css('left', widthFarben)
 
-	$(window).load(function () { 
-      $('#farben').css('left', widthFarben)
-    });
 	
 	// Farbselektor scripts //
 	

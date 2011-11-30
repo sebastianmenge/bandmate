@@ -6,6 +6,7 @@
 	height: 2000px;
 	//background: white;
 	@include center;
+	z-index: 0;
 }
 
 #header_container {
@@ -13,6 +14,7 @@
 	@include center;
 	width: 960px;
 	margin-bottom: -4px;
+	z-index: 2;
 }
 
 .public_header {
@@ -20,6 +22,7 @@
 	height: 140px;
 	border: 1px dashed #5b5b5b;
 	text-align: center;
+	background: white;
 }
 
 input[type=file] {
@@ -28,7 +31,7 @@ input[type=file] {
 }
 
 .upload {
-	margin-top: 30px;
+	margin-top: 25px;
 	color: #909090;
 }
 
@@ -48,6 +51,42 @@ input[type=file] {
 	padding: 3px;
 	@include round-all(3px);
 }
+
+#konzerte {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	font-size: 13px;
+	padding: 15px 25px 15px 20px;
+	border-left: 1px dotted #989898;
+	border-bottom: 1px dotted #989898;
+	@include round-bottom-left(6px);
+}
+
+#konzert_head {
+	color: #eb0303;
+}
+
+#konzert {
+	margin-top: 13px;
+}
+
+#konzert_datum {
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+#konzert_loc {
+	margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+
 
 #farben {
 	display: inline-block;

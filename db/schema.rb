@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111124171014) do
+ActiveRecord::Schema.define(:version => 20111130191426) do
 
   create_table "bands", :force => true do |t|
     t.string   "name"
@@ -31,12 +31,30 @@ ActiveRecord::Schema.define(:version => 20111124171014) do
 
   add_index "bands", ["slug"], :name => "index_bands_on_slug", :unique => true
 
+  create_table "concerts", :force => true do |t|
+    t.string   "location"
+    t.string   "city"
+    t.string   "country"
+    t.string   "support"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "band_id"
+    t.text     "adress"
+    t.text     "notes"
+    t.datetime "eventdate"
+    t.string   "telephone"
+    t.boolean  "publish"
+  end
+
   create_table "posts", :force => true do |t|
     t.text     "content"
     t.integer  "band_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "posts", ["user_id"], :name => "index_posts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false

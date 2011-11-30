@@ -4,7 +4,9 @@ class Band < ActiveRecord::Base
 
   define_attribute_methods = [:name, :header, :bgcolor, :maincolor, :textcolor, :linkcolor]
   
-  has_many :posts, :dependent => :destroy
+  has_many  :posts, :foreign_key => 'band_id' ,:dependent => :destroy
+  has_many  :concerts, :dependent => :destroy
+           
   belongs_to :user
   
   attr_accessible :name, :header, :bgcolor, :maincolor, :textcolor, :linkcolor
@@ -15,6 +17,9 @@ class Band < ActiveRecord::Base
                    :length => { :maximum => 30 }
                    
   validates :bgcolor, :format => { :with => hex_regex }
+  validates :maincolor, :format => { :with => hex_regex }
+  validates :textcolor, :format => { :with => hex_regex }
+  validates :linkcolor, :format => { :with => hex_regex }
                    
   def to_param
     "#{id}-#{name.parameterize}"

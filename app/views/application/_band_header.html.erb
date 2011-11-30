@@ -4,7 +4,7 @@
     <li><%= link_to "Übersicht", band_path(@band) %></li>
     <li><%= link_to "Bandstream", band_posts_path(@band) %></li>
     <li><%= link_to "Songs/Alben" %></li>
-    <li><%= link_to "Konzerte/Tour" %></li>
+    <li><%= link_to "Konzerte/Tour", band_concerts_path(@band) %></li>
     <li><%= link_to "Merchandise" %></li>    
     <li><%= link_to "Bandkasse" %></li>
     <li><%= link_to "Notizen" %></li>
@@ -15,7 +15,7 @@
   <div id="section_head_bg">
     <div class="bandname_wrap">
       <%= image_tag 'select_arrow.png', :class => 'select_arrow' %>
-      <p class="section_head"><%= link_to @band.name.upcase  %></p>
+      <p class="section_head"><%= link_to @band.name.upcase %></p>
       
     </div>
   </div>

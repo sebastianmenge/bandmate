@@ -27,6 +27,18 @@
       <p>Design anpassen</p>
     <% end %>
   </div>
+  <div id="konzerte">
+    <h4 id="konzert_head">Events/Konzerte:</h4>
+    <% @band.concerts.each do |concert| %>
+      <% if concert.publish? %>
+      <div id="konzert">
+        <div id="konzert_datum"><%= l concert.eventdate %></div>
+        <div id="konzert_loc"><%= "#{concert.location}, #{concert.city}, #{concert.country}" %></div>
+        <div><%= "/w #{concert.support}" %></div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
   
 
